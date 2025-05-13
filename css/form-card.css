@@ -1,0 +1,115 @@
+/* Estilos específicos para la tarjeta flotante del formulario */
+#registroForm {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  max-width: 500px;
+  margin: 40px auto;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+#registroForm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+#registroForm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ee9ca7, #ffdde1);
+}
+
+#registroForm label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+  font-size: 0.95rem;
+  display: block;
+}
+
+#registroForm input[type="text"],
+#registroForm input[type="email"],
+#registroForm input[type="number"],
+#registroForm input[type="date"],
+#registroForm textarea,
+#registroForm select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #f9f9f9;
+}
+
+#registroForm input:focus,
+#registroForm textarea:focus,
+#registroForm select:focus {
+  outline: none;
+  border-color: #ee9ca7;
+  box-shadow: 0 0 0 3px rgba(238, 156, 167, 0.2);
+}
+
+#registroForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#registroForm input[type="submit"] {
+  background: linear-gradient(135deg, #ee9ca7, #ffdde1);
+  color: #333;
+  font-weight: bold;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#registroForm input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(238, 156, 167, 0.4);
+}
+
+#registroForm input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#registroForm {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  #registroForm {
+    padding: 20px;
+    margin: 20px auto;
+  }
+}

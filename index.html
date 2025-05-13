@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Jesus Castillo | Portafolio Personal</title>
+    <link rel="stylesheet" href="/css/form-card.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Mi Primera Web</h1>
+        <div class="container">
+            <h1>Mi Primera Web</h1>
+        </div>
     </header>
 
     <main>
@@ -24,8 +28,6 @@
             </div>
         </section>
 
-        <hr>
-
         <section>
             <h2>¿Qué me gusta?</h2>
             <ul>
@@ -37,8 +39,6 @@
                 <li>Arroz al puente</li>
             </ul>
         </section>
-
-        <hr>
 
         <section>
             <h2>¿Cómo es mi diario vivir?</h2>
@@ -54,8 +54,6 @@
             </ol>
         </section>
 
-        <hr>
-
         <section>
             <h2>Destrezas</h2>
             <dl>
@@ -65,8 +63,6 @@
                 <dd>Si dejo que la IA juegue por mí 😅</dd>
             </dl>
         </section>
-
-        <hr>
 
         <section class="tabla-container">
             <h2>Idiomas</h2>
@@ -97,23 +93,53 @@
                 </tbody>
             </table>
         </section>
+
+        <section class="form-container">
+            <h2>Formulario de Registro</h2>
+            <h4>Completa tus datos</h4>
+            <form id="registroForm">
+                <label>Fecha de solicitud:</label>
+                <input type="date" name="fecha" required placeholder="Selecciona la fecha" title="Fecha de solicitud">
+                <label>Nombre completo:</label>
+                <input type="text" name="nombre" required placeholder="Ingresa tu nombre completo" title="Nombre completo">
+                <label>Correo:</label>
+                <input type="email" name="correo" required placeholder="Ingresa tu correo electrónico" title="Correo electrónico">
+                <label>Número telefónico:</label>
+                <input type="number" name="numero" required placeholder="Ingresa tu número telefónico" title="Número telefónico">
+                <label>Mensajes</label>
+                <textarea placeholder="Escribe tu mensaje aquí" title="Mensaje"></textarea>
+                <label>País:</label>
+                <select title="Selecciona tu país"> 
+                    <option value="">Seleccione</option>
+                    <option value="Col">Colombia</option>
+                    <option value="Per">Perú</option>
+                    <option value="Bra">Brasil</option>
+                    <option value="Vz">Venezuela</option>
+                    <option value="EE.UU">Estados Unidos</option>
+                    <option value="Ecu">Ecuador</option>
+                    <option value="Arg">Argentina</option>
+                </select>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div>
                 <h3>Contacto</h3>
-                <p>📞 321 605 5052<br>📧 ballestasjesus111@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 321 605 5052<br><i class="fas fa-envelope"></i> ballestasjesus111@gmail.com</p>
             </div>
             <div>
                 <h3>Redes Sociales</h3>
                 <ul class="menu">
-                    <li><a href="https://www.facebook.com/profile.php?id=100008983365164" target="_blank">Facebook</a></li>
-                    <li><a href="https://instagram.com/castillo_ballesta" target="_blank">Instagram</a></li>
-                    <li><a href="https://wa.me/573216055052" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100008983365164" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/jecb_2003?igsh=MTd4emd0dDI0dWdu" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://wa.me/573216055052" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 </body>
+<script src="/js/form-card.js"></script>
 </html>
